@@ -1,0 +1,12 @@
+RefStreamEdit
+Copyright 2026 Qi Si and contributors
+
+This repository contains code derived from the following open-source projects:
+
+- LongLive (https://github.com/NVlabs/LongLive), Apache License 2.0.
+- StreamEdit (https://github.com/DSL-Lab/StreamEdit), Apache License 2.0.
+- Wan2.1 (https://github.com/Wan-Video/Wan2.1), Apache License 2.0.
+
+The vendored base pipeline in third_party/LongLive_StreamEdit retains its original
+license and attribution. The core identity--motion decoupling modules and the task LoRA
+are not part of this pre-release and will be released separately.

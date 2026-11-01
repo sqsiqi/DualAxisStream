@@ -1,0 +1,42 @@
+# RefStreamEdit configuration (paper defaults)
+# The core editing modules and the task LoRA are released separately.
+
+model:
+  base: "LongLive-Wan2.1-1.3B"
+  backbone: "longlive"
+  lora_rank: 256
+  lora_alpha: 256
+  lora_targets: ["q", "k", "v", "o", "ffn"]
+
+sampling:
+  steps: 8
+  terminal_timestep: 66
+  timesteps: [1000, 866, 733, 599, 466, 332, 199, 66]
+  sliding_window: 3
+  merge_lora: true
+
+editing:
+  blend_power: 2.0
+  fg_boost: 2.0
+  mask_layers: 20
+  mask_threshold: 0.0
+  ffkv_repeat: 3
+  identity_lock:
+    start: 0.60
+    strength: 0.60
+    max_area: 0.08
+  edge_guard:
+    radius: 1
+    strength: 1.0
+    start: 0.55
+    min_area: 0.08
+
+motion:
+  strength: 2.0
+  lowpass_kernel: 3
+  ramp: "cosine"
+
+runtime:
+  resolution: [832, 480]
+  fps: 16
+  seed: 0

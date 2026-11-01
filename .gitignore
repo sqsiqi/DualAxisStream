@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+outputs/
+wan_models/
+longlive_models/
+checkpoints/
+*.mp4
+*.mov
+*.mkv
+.DS_Store
+.idea/
+.vscode/

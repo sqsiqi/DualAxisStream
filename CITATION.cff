@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you find this work useful, please cite the paper."
+title: "Reference-Guided Video Editing via Few-Step Streaming Video Generation with Disentangled Identity and Motion"
+authors:
+  - family-names: "Si"
+    given-names: "Qi"
+  - family-names: "Zhang"
+    given-names: "Zhao"
+  - family-names: "Zhao"
+    given-names: "Yang"
+  - family-names: "Zhao"
+    given-names: "Zhongqiu"
+  - family-names: "Zhang"
+    given-names: "Haijun"
+  - family-names: "Wang"
+    given-names: "Meng"
+year: 2026
+url: "https://github.com/sqsiqi/RefStreamEdit"
+license: "Apache-2.0"
+preferred-citation:
+  type: article
+  title: "Reference-Guided Video Editing via Few-Step Streaming Video Generation with Disentangled Identity and Motion"
+  authors:
+    - family-names: "Si"
+      given-names: "Qi"
+    - family-names: "Zhang"
+      given-names: "Zhao"
+    - family-names: "Zhao"
+      given-names: "Yang"
+    - family-names: "Zhao"
+      given-names: "Zhongqiu"
+    - family-names: "Zhang"
+      given-names: "Haijun"
+    - family-names: "Wang"
+      given-names: "Meng"
+  journal: "arXiv preprint"
+  year: 2026
