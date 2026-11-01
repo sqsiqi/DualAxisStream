@@ -1,11 +1,11 @@
-# RefStreamEdit
+# DualAxisStream
 
 **Reference-Guided Video Editing via Few-Step Streaming Video Generation with Disentangled Identity and Motion**
 
 Qi Si, Zhao Zhang, Yang Zhao, Zhongqiu Zhao, Haijun Zhang, Meng Wang
 
-[![Code](https://img.shields.io/badge/GitHub-Code-blue?style=flat-square&logo=github&logoColor=white)](https://github.com/sqsiqi/RefStreamEdit)
-[![Status](https://img.shields.io/badge/Status-Pre--release-orange?style=flat-square)](https://github.com/sqsiqi/RefStreamEdit)
+[![Code](https://img.shields.io/badge/GitHub-Code-blue?style=flat-square&logo=github&logoColor=white)](https://github.com/sqsiqi/DualAxisStream)
+[![Status](https://img.shields.io/badge/Status-Pre--release-orange?style=flat-square)](https://github.com/sqsiqi/DualAxisStream)
 
 <p align="center">
   <img src="assets/teaser.png" width="95%" alt="Identity-motion entanglement versus decoupled streaming editing">
@@ -21,7 +21,7 @@ guard, and the identity-orthogonal motion injection, together with the task LoRA
 
 This release provides the public inference interface, the paper's configuration, the
 benchmark protocol, and the base streaming pipeline. It is intended for inspection,
-integration, and reproducibility of the experimental setup. The `refstreamedit` package
+integration, and reproducibility of the experimental setup. The `dualaxisstream` package
 exposes the same entry point that the full release will use; the core hook currently
 raises a clear `CoreNotReleasedError`.
 
@@ -42,7 +42,7 @@ raises a clear `CoreNotReleasedError`.
 ## Method
 
 <p align="center">
-  <img src="assets/overview.png" width="95%" alt="RefStreamEdit overview">
+  <img src="assets/overview.png" width="95%" alt="DualAxisStream overview">
 </p>
 
 A source branch and a noisy target branch are processed in parallel by a streaming
@@ -66,12 +66,12 @@ See [`docs/METHOD.md`](docs/METHOD.md) for the full method description and
 ## Repository layout
 
 ```text
-refstreamedit/                  Public interface and core hook
+dualaxisstream/                  Public interface and core hook
   core/                         Placeholder for the withheld core modules
-  pipeline.py                   RefStreamEditPipeline
+  pipeline.py                   DualAxisStreamPipeline
   io.py                         Video/image validation helpers
   demo.py                       Command-line demo
-configs/refstreamedit.yaml      Paper hyper-parameters
+configs/dualaxisstream.yaml      Paper hyper-parameters
 third_party/LongLive_StreamEdit Base streaming pipeline (Apache-2.0)
 docs/                           Method and benchmark notes
 scripts/                        Checkpoint download and demo scripts
@@ -81,8 +81,8 @@ assets/                         Teaser and overview figures
 ## Environment
 
 ```bash
-conda create -n refstreamedit python=3.12 -y
-conda activate refstreamedit
+conda create -n dualaxisstream python=3.12 -y
+conda activate dualaxisstream
 
 # Choose the PyTorch command appropriate for your CUDA version (example for CUDA 12.8).
 pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cu128
@@ -114,7 +114,7 @@ uploaded together with the full code upon acceptance.
 The public entry point is:
 
 ```bash
-python -m refstreamedit.demo \
+python -m dualaxisstream.demo \
   --source path/to/source.mp4 \
   --reference path/to/reference.png \
   --prompt "Change the city bus to a double-decker bus." \
@@ -145,7 +145,8 @@ Nine metrics are grouped into four families: foreground editing fidelity (DreamS
 motion fidelity (mEPE), background preservation (BG-LPIPS, BG-DINO, BG-SSIM, BG-PSNR),
 and consistency (coverage@0.30, temporal consistency). All metrics use 16 uniformly
 sampled frames per video. See [`docs/BENCHMARK.md`](docs/BENCHMARK.md) for the exact
-definitions and construction details.
+definitions and construction details. Evaluation scripts and metric implementations are not
+included in this release.
 
 ## Release plan
 
@@ -156,7 +157,8 @@ definitions and construction details.
 | Benchmark protocol | Yes | Yes |
 | Core identity--motion modules | No | Yes |
 | Task LoRA | No | Yes |
-| Training/evaluation scripts | Partial | Yes |
+| Training scripts | Partial | Yes |
+| Evaluation scripts and metrics | Not included | Not included |
 
 The core modules and the task LoRA will be released after the paper is accepted.
 
@@ -176,7 +178,7 @@ cite the corresponding works when using this code.
 If you find this work useful, please cite:
 
 ```bibtex
-@article{si2026refstreamedit,
+@article{si2026dualaxisstream,
   title   = {Reference-Guided Video Editing via Few-Step Streaming Video Generation with Disentangled Identity and Motion},
   author  = {Si, Qi and Zhang, Zhao and Zhao, Yang and Zhao, Zhongqiu and Zhang, Haijun and Wang, Meng},
   journal = {arXiv preprint},

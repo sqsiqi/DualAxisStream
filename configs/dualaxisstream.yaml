@@ -1,4 +1,4 @@
-# RefStreamEdit configuration (paper defaults)
+# DualAxisStream configuration (paper defaults)
 # The core editing modules and the task LoRA are released separately.
 
 model:

@@ -7,4 +7,4 @@ pulling multiple repositories.
 
 The code is distributed under the Apache License 2.0. See
 `LongLive_StreamEdit/LICENSE` and the upstream repository for the original attribution.
-The core RefStreamEdit identity--motion decoupling modules are not part of this directory.
+The core DualAxisStream identity--motion decoupling modules are not part of this directory.

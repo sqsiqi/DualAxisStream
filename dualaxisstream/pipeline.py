@@ -1,4 +1,4 @@
-"""Public inference interface for RefStreamEdit."""
+"""Public inference interface for DualAxisStream."""
 
 from __future__ import annotations
 
@@ -11,16 +11,16 @@ from .core import apply_edit
 from .io import validate_image, validate_video
 
 
-DEFAULT_CONFIG = Path(__file__).resolve().parent.parent / "configs" / "refstreamedit.yaml"
+DEFAULT_CONFIG = Path(__file__).resolve().parent.parent / "configs" / "dualaxisstream.yaml"
 
 
-class RefStreamEditPipeline:
+class DualAxisStreamPipeline:
     """Reference-guided streaming video editing.
 
     Parameters
     ----------
     config_path:
-        Path to the YAML configuration. Defaults to ``configs/refstreamedit.yaml``.
+        Path to the YAML configuration. Defaults to ``configs/dualaxisstream.yaml``.
     device:
         Torch device string used by the full implementation.
     """

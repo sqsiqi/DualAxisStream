@@ -15,7 +15,7 @@ authors:
   - family-names: "Wang"
     given-names: "Meng"
 year: 2026
-url: "https://github.com/sqsiqi/RefStreamEdit"
+url: "https://github.com/sqsiqi/DualAxisStream"
 license: "Apache-2.0"
 preferred-citation:
   type: article

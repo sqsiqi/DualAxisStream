@@ -13,3 +13,7 @@ checkpoints/
 .DS_Store
 .idea/
 .vscode/
+eval/
+evaluation/
+metrics/
+results/

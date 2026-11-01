@@ -1,4 +1,4 @@
-"""Command-line demo for the RefStreamEdit public interface."""
+"""Command-line demo for the DualAxisStream public interface."""
 
 from __future__ import annotations
 
@@ -7,11 +7,11 @@ import json
 import sys
 
 from .core import CoreNotReleasedError
-from .pipeline import DEFAULT_CONFIG, RefStreamEditPipeline
+from .pipeline import DEFAULT_CONFIG, DualAxisStreamPipeline
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="RefStreamEdit demo")
+    parser = argparse.ArgumentParser(description="DualAxisStream demo")
     parser.add_argument("--source", required=True, help="Path to the source video")
     parser.add_argument("--reference", required=True, help="Path to the reference image")
     parser.add_argument("--prompt", required=True, help="Text description of the edit")
@@ -28,7 +28,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    pipeline = RefStreamEditPipeline(config_path=args.config, device=args.device)
+    pipeline = DualAxisStreamPipeline(config_path=args.config, device=args.device)
 
     if args.check:
         from .io import validate_image, validate_video

@@ -1,6 +1,6 @@
 # Method
 
-RefStreamEdit edits a source video according to a reference image and a text prompt. The
+DualAxisStream edits a source video according to a reference image and a text prompt. The
 source video supplies the scene, the camera path, and the motion; the reference supplies
 the target object's appearance. The edited foreground must follow the reference, while
 the background and the source motion stay unchanged.
@@ -86,7 +86,7 @@ which removes the per-layer adapter overhead and reduces peak memory.
 ## Differences from streaming baselines
 
 Streaming editors such as StreamEdit apply one global blending schedule to every token
-and handle the background implicitly. RefStreamEdit separates the two regions and the two
+and handle the background implicitly. DualAxisStream separates the two regions and the two
 factors: the per-token bridge decides where the reference identity acts, the foreground
 modules make the edit stable, and the orthogonal motion field decides what part of the
 source correction acts. The background is preserved structurally, and the method requires

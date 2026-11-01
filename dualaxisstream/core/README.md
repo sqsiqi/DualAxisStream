@@ -10,5 +10,5 @@ This directory will contain the core identity--motion decoupling modules:
 - the identity-orthogonal motion injection.
 
 The task LoRA will be released together with these modules. The public pipeline calls
-`refstreamedit.core.apply_edit`; the full release will replace the placeholder with the
+`dualaxisstream.core.apply_edit`; the full release will replace the placeholder with the
 actual implementation without changing the interface.
