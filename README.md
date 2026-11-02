@@ -17,7 +17,7 @@ This is the official code release for the paper. The core identity--motion decou
 modules are temporarily withheld and will be released upon acceptance. The withheld
 part covers the per-token foreground--background bridge, cross-attention value boosting,
 reference-first-frame key--value anchoring, the late identity lock, the foreground edge
-guard, and the identity-orthogonal motion injection, together with the task LoRA.
+guard, and the identity-orthogonal motion injection. The editing LoRA used in the paper is publicly released and is not part of the withheld set.
 
 This release provides the public inference interface, the paper's configuration, the
 benchmark protocol, and the base streaming pipeline. It is intended for inspection,
@@ -106,8 +106,8 @@ The script downloads:
 - `Wan-AI/Wan2.1-T2V-1.3B`
 - `Efficient-Large-Model/LongLive`
 
-The task LoRA and the core editing modules are part of the withheld release and will be
-uploaded together with the full code upon acceptance.
+The editing LoRA is publicly released. The core editing modules are part of the withheld
+release and will be uploaded upon acceptance.
 
 ## Running
 
@@ -156,11 +156,11 @@ included in this release.
 | Base streaming pipeline | Yes | Yes |
 | Benchmark protocol | Yes | Yes |
 | Core identity--motion modules | No | Yes |
-| Task LoRA | No | Yes |
+| Editing LoRA | Public | Public |
 | Training scripts | Partial | Yes |
 | Evaluation scripts and metrics | Not included | Not included |
 
-The core modules and the task LoRA will be released after the paper is accepted.
+The core modules will be released after the paper is accepted. The editing LoRA is publicly available.
 
 ## Acknowledgements
 

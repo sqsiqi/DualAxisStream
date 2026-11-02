@@ -12,4 +12,4 @@ huggingface-cli download Efficient-Large-Model/LongLive \
   --local-dir "${ROOT}/longlive_models"
 
 echo "Base checkpoints downloaded under ${ROOT}."
-echo "The task LoRA and the core editing modules are released separately."
+echo "The core editing modules are released separately. The editing LoRA is publicly available."

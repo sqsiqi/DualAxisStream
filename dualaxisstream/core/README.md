@@ -9,6 +9,6 @@ This directory will contain the core identity--motion decoupling modules:
 - the foreground edge guard,
 - the identity-orthogonal motion injection.
 
-The task LoRA will be released together with these modules. The public pipeline calls
+The editing LoRA is publicly released; the core modules will be released upon acceptance. The public pipeline calls
 `dualaxisstream.core.apply_edit`; the full release will replace the placeholder with the
 actual implementation without changing the interface.
